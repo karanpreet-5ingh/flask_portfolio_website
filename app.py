@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/index.html')
+def index_1():
+    return render_template('index.html')
+
 @app.route('/inner-page')
 def inner_page():
     return render_template('inner-page.html')
