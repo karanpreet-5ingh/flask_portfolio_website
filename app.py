@@ -19,6 +19,10 @@ def inner_page():
 def portfolio_details():
     return render_template('portfolio-details.html')
 
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
+
 @app.route('/assets/<path:path>')
 def serve_assets(path):
     return app.send_static_file('assets/' + path)
